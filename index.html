@@ -2,69 +2,260 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hemant Khatri | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">H</span><span class="logo-text">K</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <header>
-        <h1>Hemant Khatri</h1>
-        <p>IT Student | Forex Trader | Crypto Investor</p>
-        <div class="links">
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://youtube.com" target="_blank">YouTube</a>
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="name">Hemant Khatri</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typing-text">IT Student</span>
+                    <span class="separator"> | </span>
+                    <span class="typing-text">Web Developer</span>
+                    <span class="separator"> | </span>
+                    <span class="typing-text">App Developer</span>
+                </p>
+                <p class="hero-description">
+                    Building a strong career in IT, one project at a time.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="resume.pdf" target="_blank" class="btn btn-secondary" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/khatrihemant100" target="_blank" class="social-icon" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/hemantkhatree/" target="_blank" class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I am an IT student in Japan with experience in forex trading, 
-            crypto investments, and content creation. 
-            My goal is to build a strong career in IT and finance.
-        </p>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Forex Trading & Risk Management</li>
-            <li>Crypto Research (Long-Term)</li>
-            <li>Git & GitHub</li>
-            <li>Content Creation (YouTube, TikTok)</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Trading Journal</h3>
-            <p>Personal trading journal to track trades and performance.</p>
-            <a href="https://github.com/yourusername/trading-journal" target="_blank">
-                View on GitHub
-            </a>
-        </div>
-
-        <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>This personal portfolio hosted using GitHub Pages.</p>
-            <a href="https://github.com/yourusername/yourusername.github.io" target="_blank">
-                View on GitHub
-            </a>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span>
+                About Me
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am an IT student in Japan passionate about software development, 
+                        web technologies, and mobile app development. 
+                        My goal is to build a strong career in IT and become a skilled full-stack developer.
+                    </p>
+                    <p>
+                        Passionate about technology, I continuously work on 
+                        improving my programming skills and exploring new opportunities in software development.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="hemant.png" alt="Hemant Khatri" class="profile-image">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Email: yourname@email.com</p>
-        <p>Location: Japan</p>
+    <!-- Skills Section -->
+    <section id="skills" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span>
+                Skills
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Frontend & Backend</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Programming Language</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-php"></i>
+                    </div>
+                    <h3>PHP</h3>
+                    <p>Server-Side Development</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>C#</h3>
+                    <p>Object-Oriented Programming</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3>Version Control</h3>
+                    <p>Git & GitHub</p>
+                </div>
+                <div class="skill-card learning">
+                    <div class="skill-icon">
+                        <i class="fab fa-flutter"></i>
+                    </div>
+                    <h3>Flutter</h3>
+                    <p>Mobile App Development <span class="learning-badge">Learning</span></p>
+                </div>
+                <div class="skill-card learning">
+                    <div class="skill-icon">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <h3>Node.js</h3>
+                    <p>Backend Development <span class="learning-badge">Learning</span></p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2026 Hemant Khatri</p>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                Projects
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Application</h3>
+                    <p>Full-stack web application built with modern technologies. Features responsive design and interactive user interface.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Web App</span>
+                        <span class="tech-tag">Full-Stack</span>
+                    </div>
+                    <a href="https://github.com/khatrihemant100" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Portfolio Website</h3>
+                    <p>This personal portfolio website showcasing my skills and projects. Hosted using GitHub Pages with modern design.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">Responsive</span>
+                    </div>
+                    <a href="https://github.com/khatrihemant100" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                Get In Touch
+            </h2>
+            <div class="contact-content">
+                <p class="contact-intro">
+                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+                </p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:yourname@email.com">yourname@email.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Japan</p>
+                        </div>
+                    </div>
+                    <div class="contact-item resume-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <div>
+                            <h4>Resume</h4>
+                            <a href="resume.pdf" target="_blank" class="resume-link">
+                                <i class="fas fa-download"></i> Download PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <a href="https://github.com/khatrihemant100" target="_blank" class="contact-social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hemantkhatree/" target="_blank" class="contact-social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Hemant Khatri. Built with passion and dedication.</p>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
