@@ -477,6 +477,16 @@ body {
     padding-right: 1rem;
 }
 
+.timeline-date {
+    position: absolute;
+    left: -65px;      /* icon ले ढाक्ने ठाउँबाट बाहिर ल्याउने */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;       /* icon भन्दा माथि देखाउन */
+}
+
+
+
 .timeline-content {
     background: rgba(0, 255, 204, 0.05);
     border: 1px solid rgba(0, 255, 204, 0.2);
