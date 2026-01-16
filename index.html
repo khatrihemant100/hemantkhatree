@@ -11,13 +11,19 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
+            <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                 <span class="logo-text">H</span><span class="logo-text">K</span>
             </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -44,7 +50,7 @@
                    Currently studying IT in Japan. Focused on building a strong career in IT sector.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Project</a>
+                    <a href="#projects" class="btn btn-primary">Projects</a>
                     <a href="resume.pdf" target="_blank" class="btn btn-secondary" download>
                         <i class="fas fa-download"></i>Resume(Japanese)
                     </a>
@@ -66,7 +72,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section section-dark">
         <div class="container">
             <h2 class="section-title">
                 <span class="title-number">01.</span>
@@ -102,92 +108,122 @@
                 <span class="title-number">02.</span>
                 Education
             </h2>
-            <div class="education-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">July 2016</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-school"></i>
+            <div class="education-cards">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-institution">Yokohama System Engineering School</h3>
+                        <p class="education-degree">Vocational School, Computer Programming</p>
+                        <p class="education-dates">Mar 2024 - Mar 2026</p>
+                        <p class="education-activities"><strong>Activities and societies:</strong> create different type of project || learn deeply Programming Language</p>
+                        <div class="education-skills">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java (基礎)</span>
+                            <span class="skill-tag">Linux 基本操作</span>
                         </div>
-                        <h3>Enrolled in BOON ACADEMY</h3>
-                        <p class="timeline-location">Computer Application Diploma Course (Nepal)</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">July 2017</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-institution">Yokohama International Language Institute</h3>
+                        <p class="education-degree">Japanese Language, Japanese Studies</p>
+                        <p class="education-dates">Apr 2022 - Mar 2024</p>
+                        <p class="education-grade"><strong>Grade:</strong> JLPT N2 LEVEL</p>
+                        <p class="education-activities"><strong>Activities and societies:</strong> Study N2 LEVEL of Japanese || Learn Japanese Culture ||</p>
+                        <div class="education-skills">
+                            <span class="skill-tag">Japanese Culture</span>
+                            <span class="skill-tag">Japanese Language Proficiency Test</span>
+                            <span class="skill-tag">Japanese History</span>
                         </div>
-                        <h3>Completed Computer Diploma Course</h3>
-                        <p class="timeline-location">BOON ACADEMY (Nepal)</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">Aug 2017</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-school"></i>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-institution">PPM HIGHER SECONDARY SCHOOL</h3>
+                        <p class="education-degree">High School Diploma, Computer Science</p>
+                        <p class="education-dates">Jul 2017 - Jul 2019</p>
+                        <p class="education-activities"><strong>Activities and societies:</strong> Fundamental of Computer || Programming Language</p>
+                        <div class="education-skills">
+                            <span class="skill-tag">C (Programming Language)</span>
+                            <span class="skill-tag">C++</span>
                         </div>
-                        <h3>Enrolled in P.P.M.H HIGH SCHOOL</h3>
-                        <p class="timeline-location">Nepal High School</p>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">July 2019</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3 class="education-institution">BOON Academy of Information Technology</h3>
+                        <p class="education-degree">Intermediate of Computer, Basic Computer Skills || Advance Computer Skill</p>
+                        <p class="education-dates">Jan 2016 - Jan 2018</p>
+                        <p class="education-grade"><strong>Grade:</strong> Fundamental of Computer || Advance of Computer</p>
+                        <p class="education-activities"><strong>Activities and societies:</strong> Learn Basic & Diploma of computer || Web Design || Programming</p>
+                        <div class="education-skills">
+                            <span class="skill-tag">Microsoft Office</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">C (Programming Language)</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">PHP</span>
                         </div>
-                        <h3>Graduated High School</h3>
-                        <p class="timeline-location">P.P.M.H SECONDARY SCHOOL (Nepal High School)</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="timeline-item">
-                    <div class="timeline-date">Apr 2022</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-language"></i>
-                        </div>
-                        <h3>Enrolled in Yokohama International Language Institute</h3>
-                        <p class="timeline-location">Japanese Language School</p>
+    <!-- Experience Section -->
+    <section id="experience" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                Experience
+            </h2>
+            <div class="experience-cards">
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <i class="fas fa-building"></i>
                     </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Mar 2024</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-graduation-cap"></i>
+                    <div class="experience-content">
+                        <h3 class="experience-title">Receptionist & Computer Instructor</h3>
+                        <p class="experience-company">
+                            BOON Academy (Nepal)
+                            <a href="https://www.facebook.com/BOON70" target="_blank" rel="noopener noreferrer" class="company-link" title="Visit BOON Academy Facebook Page">
+                                <i class="fab fa-facebook"></i>
+                                <span>View Page</span>
+                            </a>
+                        </p>
+                        <div class="experience-meta">
+                            <span class="experience-type">Permanent</span>
+                            <span class="experience-duration">Jan 2018 - Apr 2020 · 2 yrs 4 mos</span>
+                            <span class="experience-location">On-site</span>
                         </div>
-                        <h3>Graduated from Language Institute</h3>
-                        <p class="timeline-location">Yokohama International Language Institute</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Apr 2024</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        <h3>Enrolled in Yokohama System Institute of Technology</h3>
-                        <p class="timeline-location">Global IT System Course (Japan)</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Mar 2026</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Expected Graduation</h3>
-                        <p class="timeline-location">Yokohama System Institute of Technology - Global IT System Course</p>
+                        <ul class="experience-responsibilities">
+                            <li>Front desk management, student inquiry handling, and daily administrative support</li>
+                            <li>Student registration, fee records, and basic office documentation management</li>
+                            <li>Taught Basic Computer Skills (MS Word, Excel, PowerPoint, Internet & Email)</li>
+                            <li>Conducted Computer Diploma Classes for beginner-level students</li>
+                            <li>Assisted students with practical computer usage and problem-solving</li>
+                            <li>Maintained a friendly and professional learning environment</li>
+                            <li>Supported trainers and management with coordination tasks</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -195,10 +231,10 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section">
+    <section id="skills" class="section section-dark">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-number">03.</span>
+                <span class="title-number">04.</span>
                 Skills
             </h2>
             <div class="skills-grid">
@@ -263,10 +299,10 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section">
+    <section id="projects" class="section section-dark">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-number">04.</span>
+                <span class="title-number">05.</span>
                 Projects
             </h2>
             <div class="projects-grid">
@@ -371,7 +407,7 @@
     <section id="contact" class="section section-dark">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-number">05.</span>
+                <span class="title-number">06.</span>
                 Get In Touch with me
             </h2>
             <div class="contact-content">
@@ -383,7 +419,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <a href="mailto:yourname@email.com">khatrihemant100@gmail.com</a>
+                            <a href="mailto:khatrihemant100@gmail.com">khatrihemant100@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -418,7 +454,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 HK. Built with my passion and dedication.</p>
+            <p>&copy; <span id="current-year">2025</span> HK. Built with my passion and dedication.</p>
         </div>
     </footer>
 
