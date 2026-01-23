@@ -6,6 +6,12 @@
     <title>Hemant Khatri | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'Emoji';
+            src: local('Apple Color Emoji'), local('Segoe UI Emoji'), local('Noto Color Emoji'), local('Android Emoji');
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -17,21 +23,43 @@
                 </div>
                 <span class="logo-name">HEMANT KHATRI</span>
             </div>
-            <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#education" data-i18n="nav.education">Education</a></li>
+                    <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                    <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                    <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                    <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+                <div class="language-selector">
+                    <button class="language-btn" id="lang-btn">
+                        <span class="flag-icon" id="current-flag" aria-label="Language">🇺🇸</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown" id="lang-dropdown">
+                        <button class="lang-option" data-lang="en">
+                            <span class="flag-icon" aria-hidden="true">🇺🇸</span>
+                            <span>English</span>
+                        </button>
+                        <button class="lang-option" data-lang="ja">
+                            <span class="flag-icon" aria-hidden="true">🇯🇵</span>
+                            <span>日本語</span>
+                        </button>
+                        <button class="lang-option" data-lang="ne">
+                            <span class="flag-icon" aria-hidden="true">🇳🇵</span>
+                            <span>नेपाली</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -40,25 +68,25 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
-                    <span class="greeting">Hello, I'm</span>
+                    <span class="greeting" data-i18n="hero.greeting">Hello, I'm</span>
                     <span class="name">HEMANT KHATRI</span>
                 </h1>
                 <p class="hero-subtitle">
-                    <span class="typing-text">IT Student</span>
+                    <span class="typing-text" data-i18n="hero.role1">IT Student</span>
                     <span class="separator"> | </span>
-                    <span class="typing-text">Web / APP  Developer </span>
+                    <span class="typing-text" data-i18n="hero.role2">Web / APP  Developer</span>
                     <span class="separator"> | </span>
-                    <span class="typing-text">System Developer</span>
+                    <span class="typing-text" data-i18n="hero.role3">System Developer</span>
                 </p>
-                <p class="hero-description">
+                <p class="hero-description" data-i18n="hero.description">
                    Currently studying IT in Japan. Focused on building a strong career in IT sector.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Projects</a>
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero.btnProjects">Projects</a>
                     <a href="resume.pdf" target="_blank" class="btn btn-secondary" download>
-                        <i class="fas fa-download"></i>Resume(Japanese)
+                        <i class="fas fa-download"></i><span data-i18n="hero.btnResume">Resume(Japanese)</span>
                     </a>
-                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    <a href="#contact" class="btn btn-outline" data-i18n="hero.btnContact">Get In Touch</a>
                 </div>
             </div>
             <div class="social-links">
@@ -80,16 +108,16 @@
         <div class="container">
             <h2 class="section-title">
                 <span class="title-number">01.</span>
-                About Me
+                <span data-i18n="about.title">About Me</span>
             </h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
+                    <p data-i18n="about.para1">
                         Hi! I'm Hemant, an IT student currently studying in Japan. I'm really into 
                         software development, especially web technologies and mobile app development. 
                         My goal is to become a skilled full-stack developer and build a strong career in IT.
                     </p>
-                    <p>
+                    <p data-i18n="about.para2">
                         When I'm not studying, I spend my time working on personal projects and practicing 
                         different programming languages. I enjoy learning new technologies and always try 
                         to improve my coding skills. Currently working with PHP for web development and 
@@ -127,7 +155,7 @@
         <div class="container">
             <h2 class="section-title">
                 <span class="title-number">02.</span>
-                Education
+                <span data-i18n="education.title">Education</span>
             </h2>
             <div class="education-cards">
                 <div class="education-card">
@@ -138,7 +166,7 @@
                         <h3 class="education-institution">Yokohama System Engineering School</h3>
                         <p class="education-degree">Vocational School, Computer Programming</p>
                         <p class="education-dates">Mar 2024 - Mar 2026</p>
-                        <p class="education-activities"><strong>Activities and societies:</strong> create different type of project || learn deeply Programming Language</p>
+                        <p class="education-activities"><strong data-i18n="education.activities">Activities and societies:</strong> <span data-i18n="education.act1">create different type of project || learn deeply Programming Language</span></p>
                         <div class="education-skills">
                             <span class="skill-tag">HTML / CSS / JavaScript</span>
                             <span class="skill-tag">PHP & SQL</span>
@@ -158,8 +186,8 @@
                         <h3 class="education-institution">Yokohama International Language Institute</h3>
                         <p class="education-degree">Japanese Language, Japanese Studies</p>
                         <p class="education-dates">Apr 2022 - Mar 2024</p>
-                        <p class="education-grade"><strong>Grade:</strong> JLPT N2 LEVEL</p>
-                        <p class="education-activities"><strong>Activities and societies:</strong> Study N2 LEVEL of Japanese || Learn Japanese Culture ||</p>
+                        <p class="education-grade"><strong data-i18n="education.grade">Grade:</strong> JLPT N2 LEVEL</p>
+                        <p class="education-activities"><strong data-i18n="education.activities">Activities and societies:</strong> <span data-i18n="education.act2">Study N2 LEVEL of Japanese || Learn Japanese Culture ||</span></p>
                         <div class="education-skills">
                             <span class="skill-tag">Japanese Culture and Rules</span>
                             <span class="skill-tag">Improved speaking, listening, reading, and writing skills</span>
@@ -176,7 +204,7 @@
                         <h3 class="education-institution">PPM HIGHER SECONDARY SCHOOL</h3>
                         <p class="education-degree">High School Diploma, Computer Science</p>
                         <p class="education-dates">Jul 2017 - Jul 2019</p>
-                        <p class="education-activities"><strong>Activities and societies:</strong> Fundamental of Computer || Programming Language</p>
+                        <p class="education-activities"><strong data-i18n="education.activities">Activities and societies:</strong> <span data-i18n="education.act3">Fundamental of Computer || Programming Language</span></p>
                         <div class="education-skills">
                             <span class="skill-tag">C (Programming Language)</span>
                             <span class="skill-tag">management</span>
@@ -194,8 +222,8 @@
                         <h3 class="education-institution">BOON Academy of Information Technology</h3>
                         <p class="education-degree">Intermediate of Computer, Basic Computer Skills || Advance Computer Skill</p>
                         <p class="education-dates">Jan 2016 - Jan 2018</p>
-                        <p class="education-grade"><strong>Grade:</strong> Fundamental of Computer || Advance of Computer</p>
-                        <p class="education-activities"><strong>Activities and societies:</strong> Learn Basic & Diploma of computer || Web Design || Programming</p>
+                        <p class="education-grade"><strong data-i18n="education.grade">Grade:</strong> <span data-i18n="education.grade2">Fundamental of Computer || Advance of Computer</span></p>
+                        <p class="education-activities"><strong data-i18n="education.activities">Activities and societies:</strong> <span data-i18n="education.act4">Learn Basic & Diploma of computer || Web Design || Programming</span></p>
                         <div class="education-skills">
                             <span class="skill-tag">Microsoft Office</span>
                             <span class="skill-tag">HTML</span>
@@ -215,7 +243,7 @@
         <div class="container">
             <h2 class="section-title">
                 <span class="title-number">03.</span>
-                Experience
+                <span data-i18n="experience.title">Experience</span>
             </h2>
             <div class="experience-cards">
                 <div class="experience-card">
@@ -223,25 +251,25 @@
                         <i class="fas fa-building"></i>
                     </div>
                     <div class="experience-content">
-                        <h3 class="experience-title">Receptionist & Computer Instructor</h3>
+                        <h3 class="experience-title" data-i18n="experience.job1.title">Receptionist & Computer Instructor</h3>
                         <p class="experience-company">
                             BOON Academy (Nepal)
                             <a href="https://www.facebook.com/BOON70" target="_blank" rel="noopener noreferrer" class="company-link" title="Visit BOON Academy Facebook Page">
                                 <i class="fab fa-facebook"></i>
-                                <span>View Page</span>
+                                <span data-i18n="experience.viewPage">View Page</span>
                             </a>
                         </p>
                         <div class="experience-meta">
                    
                             <span class="experience-duration">Jan 2018 - Apr 2020 · 2 yrs 4 mos</span>
-                            <span class="experience-location">On-site</span>
+                            <span class="experience-location" data-i18n="experience.location">On-site</span>
                         </div>
                         <ul class="experience-responsibilities">
-                            <li>Front desk management, student inquiry handling, and daily administrative support</li>
-                            <li>Student registration, fee records, and basic office documentation management</li>
-                            <li>Taught Basic Computer Skills (MS Word, Excel, PowerPoint, Internet & Email)</li>
-                            <li>Conducted Computer Diploma Classes for beginner-level students</li>
-                            <li>Assisted students with practical computer usage and problem-solving</li>
+                            <li data-i18n="experience.job1.resp1">Front desk management, student inquiry handling, and daily administrative support</li>
+                            <li data-i18n="experience.job1.resp2">Student registration, fee records, and basic office documentation management</li>
+                            <li data-i18n="experience.job1.resp3">Taught Basic Computer Skills (MS Word, Excel, PowerPoint, Internet & Email)</li>
+                            <li data-i18n="experience.job1.resp4">Conducted Computer Diploma Classes for beginner-level students</li>
+                            <li data-i18n="experience.job1.resp5">Assisted students with practical computer usage and problem-solving</li>
                     
                         </ul>
                     </div>
@@ -255,14 +283,14 @@
         <div class="container">
             <h2 class="section-title">
                 <span class="title-number">04.</span>
-                Skills
+                <span data-i18n="skills.title">Skills</span>
             </h2>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Web Development</h3>
+                    <h3 data-i18n="skills.webdev">Web Development</h3>
                     <p>HTML, CSS, JavaScript</p>
                 </div>
                 <div class="skill-card">
@@ -270,34 +298,34 @@
                         <i class="fab fa-js-square"></i>
                     </div>
                     <h3>JavaScript</h3>
-                    <p>Frontend & Backend</p>
+                    <p data-i18n="skills.jsdesc">Frontend & Backend</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fab fa-python"></i>
                     </div>
                     <h3>Python</h3>
-                    <p>Programming Language</p>
+                    <p data-i18n="skills.pydesc">Programming Language</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fab fa-php"></i>
                     </div>
                     <h3>PHP</h3>
-                    <p>Server-Side Development</p>
+                    <p data-i18n="skills.phpdesc">Server-Side Development</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fab fa-microsoft"></i>
                     </div>
                     <h3>C#</h3>
-                    <p>Object-Oriented Programming</p>
+                    <p data-i18n="skills.csharpdesc">Object-Oriented Programming</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon">
                         <i class="fab fa-git-alt"></i>
                     </div>
-                    <h3>Version Control</h3>
+                    <h3 data-i18n="skills.git">Version Control</h3>
                     <p>Git & GitHub</p>
                 </div>
                 <div class="skill-card learning">
@@ -305,14 +333,14 @@
                         <i class="fab fa-flutter"></i>
                     </div>
                     <h3>Flutter</h3>
-                    <p>Mobile App Development <span class="learning-badge">Self Learning</span></p>
+                    <p data-i18n="skills.flutterdesc">Mobile App Development <span class="learning-badge" data-i18n="skills.selflearning">Self Learning</span></p>
                 </div>
                 <div class="skill-card learning">
                     <div class="skill-icon">
                         <i class="fab fa-node-js"></i>
                     </div>
                     <h3>Node.js</h3>
-                    <p>Backend Development <span class="learning-badge">Self Learning</span></p>
+                    <p data-i18n="skills.nodedesc">Backend Development <span class="learning-badge" data-i18n="skills.selflearning">Self Learning</span></p>
                 </div>
             </div>
         </div>
@@ -323,7 +351,7 @@
         <div class="container">
             <h2 class="section-title">
                 <span class="title-number">05.</span>
-                Projects
+                <span data-i18n="projects.title">Projects</span>
             </h2>
             <div class="projects-grid">
                 <div class="project-card">
@@ -331,13 +359,13 @@
                         <i class="fab fa-php"></i>
                     </div>
                     <h3>RoomFinder</h3>
-                    <p>A web application for Connect Room Owner and Room finder. Built with PHP and mysql for server-side functionality.</p>
+                    <p data-i18n="projects.roomfinder">A web application for Connect Room Owner and Room finder. Built with PHP and mysql for server-side functionality.</p>
                     <div class="project-tech">
                         <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">Web App</span>
+                        <span class="tech-tag" data-i18n="projects.webapp">Web App</span>
                     </div>
                     <a href="https://github.com/khatrihemant100/RoomFinder" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View on GitHub
+                        <i class="fab fa-github"></i> <span data-i18n="projects.viewgithub">View on GitHub</span>
                     </a>
                 </div>
 
@@ -346,13 +374,13 @@
                         <i class="fab fa-php"></i>
                     </div>
                     <h3>trading_Site</h3>
-                    <p>A trading website built with PHP. Features modern web development practices.</p>
+                    <p data-i18n="projects.trading">A trading website built with PHP. Features modern web development practices.</p>
                     <div class="project-tech">
                         <span class="tech-tag">PHP</span>
-                        <span class="tech-tag">Trading</span>
+                        <span class="tech-tag" data-i18n="projects.tradingtag">Trading</span>
                     </div>
                     <a href="https://github.com/khatrihemant100/trading_Site" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View on GitHub
+                        <i class="fab fa-github"></i> <span data-i18n="projects.viewgithub">View on GitHub</span>
                     </a>
                 </div>
 
@@ -361,14 +389,14 @@
                         <i class="fas fa-gamepad"></i>
                     </div>
                     <h3>candy-crush-game</h3>
-                    <p>A simple game created using Unity to practice C# scripting, game logic, and basic gameplay systems.</p>
+                    <p data-i18n="projects.candy1">A simple game created using Unity to practice C# scripting, game logic, and basic gameplay systems.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Unity</span>
                         <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Game Development</span>
+                        <span class="tech-tag" data-i18n="projects.gamedev">Game Development</span>
                     </div>
                     <a href="https://github.com/khatrihemant100/candy-crush-game" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View on GitHub
+                        <i class="fab fa-github"></i> <span data-i18n="projects.viewgithub">View on GitHub</span>
                     </a>
                 </div>
 
@@ -377,14 +405,14 @@
                         <i class="fas fa-gamepad"></i>
                     </div>
                     <h3>candy-dozer-game</h3>
-                    <p>A simple game created using Unity to practice C# scripting, game logic, and basic gameplay systems.</p>
+                    <p data-i18n="projects.candy1">A simple game created using Unity to practice C# scripting, game logic, and basic gameplay systems.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Unity</span>
                         <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Game Development</span>
+                        <span class="tech-tag" data-i18n="projects.gamedev">Game Development</span>
                     </div>
                     <a href="https://github.com/khatrihemant100/candy-dozer-game" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View on GitHub
+                        <i class="fab fa-github"></i> <span data-i18n="projects.viewgithub">View on GitHub</span>
                     </a>
                 </div>
 
@@ -393,14 +421,14 @@
                         <i class="fas fa-gamepad"></i>
                     </div>
                     <h3>Candycrush-Game</h3>
-                    <p>This project is developed by me. Project name is Candycrush gaming app which is created from UNITY.</p>
+                    <p data-i18n="projects.candy2">This project is developed by me. Project name is Candycrush gaming app which is created from UNITY.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Unity</span>
                         <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Mobile Game</span>
+                        <span class="tech-tag" data-i18n="projects.mobilegame">Mobile Game</span>
                     </div>
                     <a href="https://github.com/khatrihemant100/Candycrush-Game" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View on GitHub
+                        <i class="fab fa-github"></i> <span data-i18n="projects.viewgithub">View on GitHub</span>
                     </a>
                 </div>
 
@@ -409,14 +437,14 @@
                         <i class="fas fa-gamepad"></i>
                     </div>
                     <h3>emoji-candy-crush</h3>
-                    <p>This is a Unity-based game project created to practice game development concepts such as C# scripting, gameplay mechanics, and user interaction.</p>
+                    <p data-i18n="projects.candy3">This is a Unity-based game project created to practice game development concepts such as C# scripting, gameplay mechanics, and user interaction.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Unity</span>
                         <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Game Development</span>
+                        <span class="tech-tag" data-i18n="projects.gamedev">Game Development</span>
                     </div>
                     <a href="https://github.com/khatrihemant100/emoji-candy-crush" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> View on GitHub
+                        <i class="fab fa-github"></i> <span data-i18n="projects.viewgithub">View on GitHub</span>
                     </a>
                 </div>
             </div>
@@ -428,10 +456,10 @@
         <div class="container">
             <h2 class="section-title">
                 <span class="title-number">06.</span>
-                Resume / CV
+                <span data-i18n="cv.title">Resume / CV</span>
             </h2>
             <div class="cv-content">
-                <p class="cv-intro">
+                <p class="cv-intro" data-i18n="cv.intro">
                     View or download my resume and career history documents.
                 </p>
                 <div class="cv-cards">
@@ -439,14 +467,14 @@
                         <div class="cv-icon">
                             <i class="fas fa-file-pdf"></i>
                         </div>
-                        <h3>履歴書 (Resume)</h3>
-                        <p>Japanese Resume</p>
+                        <h3>履歴書 <span data-i18n="cv.resume">(Resume)</span></h3>
+                        <p data-i18n="cv.resumeDesc">Japanese Resume</p>
                         <div class="cv-actions">
                             <button class="btn btn-primary cv-view-btn" data-cv="履歴書_KHATRI_HEMANT.pdf">
-                                <i class="fas fa-eye"></i> View
+                                <i class="fas fa-eye"></i> <span data-i18n="cv.view">View</span>
                             </button>
                             <a href="履歴書_KHATRI_HEMANT.pdf" target="_blank" class="btn btn-secondary" download>
-                                <i class="fas fa-download"></i> Download
+                                <i class="fas fa-download"></i> <span data-i18n="cv.download">Download</span>
                             </a>
                         </div>
                     </div>
@@ -454,14 +482,14 @@
                         <div class="cv-icon">
                             <i class="fas fa-file-pdf"></i>
                         </div>
-                        <h3>職務経歴書 (Career History)</h3>
-                        <p>Japanese Career History</p>
+                        <h3>職務経歴書 <span data-i18n="cv.career">(Career History)</span></h3>
+                        <p data-i18n="cv.careerDesc">Japanese Career History</p>
                         <div class="cv-actions">
                             <button class="btn btn-primary cv-view-btn" data-cv="職務経歴書_KHATRI_HEMANT.pdf">
-                                <i class="fas fa-eye"></i> View
+                                <i class="fas fa-eye"></i> <span data-i18n="cv.view">View</span>
                             </button>
                             <a href="職務経歴書_KHATRI_HEMANT.pdf" target="_blank" class="btn btn-secondary" download>
-                                <i class="fas fa-download"></i> Download
+                                <i class="fas fa-download"></i> <span data-i18n="cv.download">Download</span>
                             </a>
                         </div>
                     </div>
@@ -474,7 +502,7 @@
     <div id="cv-modal" class="cv-modal">
         <div class="cv-modal-content">
             <div class="cv-modal-header">
-                <h3 id="cv-modal-title">CV Viewer</h3>
+                <h3 id="cv-modal-title" data-i18n="cv.modalTitle">CV Viewer</h3>
                 <button class="cv-modal-close" aria-label="Close">
                     <i class="fas fa-times"></i>
                 </button>
@@ -490,24 +518,24 @@
         <div class="container">
             <h2 class="section-title">
                 <span class="title-number">07.</span>
-                Get In Touch with me
+                <span data-i18n="contact.title">Get In Touch with me</span>
             </h2>
             <div class="contact-content">
-                <p class="contact-intro">
+                <p class="contact-intro" data-i18n="contact.intro">
                     I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
                 </p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <h4>Email</h4>
+                            <h4 data-i18n="contact.email">Email</h4>
                             <a href="mailto:khatrihemant100@gmail.com">khatrihemant100@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Location</h4>
+                            <h4 data-i18n="contact.location">Location</h4>
                             <p>Yokohama, Japan</p>
                         </div>
                     </div>
@@ -529,7 +557,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="current-year">2025</span> HK. Built with my passion and dedication.</p>
+            <p>&copy; <span id="current-year">2025</span> HK. <span data-i18n="footer.text">Built with my passion and dedication.</span></p>
         </div>
     </footer>
 
