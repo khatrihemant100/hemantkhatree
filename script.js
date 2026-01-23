@@ -38,7 +38,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections and cards
-document.querySelectorAll('.section, .skill-card, .project-card, .education-card, .experience-card').forEach(el => {
+document.querySelectorAll('.section, .skill-card, .project-card, .education-card, .experience-card, .cv-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -119,3 +119,137 @@ const yearElement = document.getElementById('current-year');
 if (yearElement) {
     yearElement.textContent = currentYear;
 }
+
+// Image Slideshow Functionality
+const slideshowImages = document.querySelectorAll('.slideshow-image');
+const indicators = document.querySelectorAll('.indicator');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+let currentSlide = 0;
+let slideshowInterval;
+
+function showSlide(index) {
+    // Remove active class from all images and indicators
+    slideshowImages.forEach(img => img.classList.remove('active'));
+    indicators.forEach(ind => ind.classList.remove('active'));
+    
+    // Add active class to current slide
+    if (slideshowImages[index]) {
+        slideshowImages[index].classList.add('active');
+    }
+    if (indicators[index]) {
+        indicators[index].classList.add('active');
+    }
+    
+    currentSlide = index;
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slideshowImages.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slideshowImages.length) % slideshowImages.length;
+    showSlide(currentSlide);
+}
+
+function startSlideshow() {
+    slideshowInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+}
+
+function stopSlideshow() {
+    clearInterval(slideshowInterval);
+}
+
+// Initialize slideshow
+if (slideshowImages.length > 0) {
+    showSlide(0);
+    startSlideshow();
+    
+    // Next button
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            stopSlideshow();
+            nextSlide();
+            startSlideshow();
+        });
+    }
+    
+    // Previous button
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            stopSlideshow();
+            prevSlide();
+            startSlideshow();
+        });
+    }
+    
+    // Indicator clicks
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            stopSlideshow();
+            showSlide(index);
+            startSlideshow();
+        });
+    });
+    
+    // Pause on hover
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    if (slideshowContainer) {
+        slideshowContainer.addEventListener('mouseenter', stopSlideshow);
+        slideshowContainer.addEventListener('mouseleave', startSlideshow);
+    }
+}
+
+// CV Viewer Modal Functionality
+const cvModal = document.getElementById('cv-modal');
+const cvModalTitle = document.getElementById('cv-modal-title');
+const cvIframe = document.getElementById('cv-iframe');
+const cvViewButtons = document.querySelectorAll('.cv-view-btn');
+const cvModalClose = document.querySelector('.cv-modal-close');
+
+function openCVModal(cvFileName) {
+    const cvNames = {
+        '履歴書_KHATRI_HEMANT.pdf': '履歴書 (Resume)',
+        '職務経歴書_KHATRI_HEMANT.pdf': '職務経歴書 (Career History)'
+    };
+    
+    cvModalTitle.textContent = cvNames[cvFileName] || 'CV Viewer';
+    cvIframe.src = cvFileName;
+    cvModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCVModal() {
+    cvModal.classList.remove('active');
+    cvIframe.src = '';
+    document.body.style.overflow = '';
+}
+
+// Open CV modal when view button is clicked
+cvViewButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const cvFile = btn.getAttribute('data-cv');
+        openCVModal(cvFile);
+    });
+});
+
+// Close modal
+if (cvModalClose) {
+    cvModalClose.addEventListener('click', closeCVModal);
+}
+
+// Close modal when clicking outside
+cvModal.addEventListener('click', (e) => {
+    if (e.target === cvModal) {
+        closeCVModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && cvModal.classList.contains('active')) {
+        closeCVModal();
+    }
+});

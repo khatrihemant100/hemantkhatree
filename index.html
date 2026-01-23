@@ -29,6 +29,7 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#cv">CV</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -96,8 +97,25 @@
                     </p>
                 </div>
                 <div class="about-image">
-                    <div class="image-wrapper">
-                        <img src="hemant.png" alt="Hemant Khatri" class="profile-image">
+                    <div class="slideshow-container">
+                        <div class="slideshow-wrapper">
+                            <img src="pic1.png" alt="Gallery Image 1" class="slideshow-image active">
+                            <img src="pick2.png" alt="Gallery Image 2" class="slideshow-image">
+                            <img src="pick3.png" alt="Gallery Image 3" class="slideshow-image">
+                            <img src="pick4.png" alt="Gallery Image 4" class="slideshow-image">
+                        </div>
+                        <div class="slideshow-indicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                            <span class="indicator" data-slide="3"></span>
+                        </div>
+                        <button class="slideshow-btn prev-btn" aria-label="Previous image">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slideshow-btn next-btn" aria-label="Next image">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -405,11 +423,73 @@
         </div>
     </section>
 
+    <!-- CV Section -->
+    <section id="cv" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">06.</span>
+                Resume / CV
+            </h2>
+            <div class="cv-content">
+                <p class="cv-intro">
+                    View or download my resume and career history documents.
+                </p>
+                <div class="cv-cards">
+                    <div class="cv-card">
+                        <div class="cv-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>履歴書 (Resume)</h3>
+                        <p>Japanese Resume</p>
+                        <div class="cv-actions">
+                            <button class="btn btn-primary cv-view-btn" data-cv="履歴書_KHATRI_HEMANT.pdf">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                            <a href="履歴書_KHATRI_HEMANT.pdf" target="_blank" class="btn btn-secondary" download>
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cv-card">
+                        <div class="cv-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>職務経歴書 (Career History)</h3>
+                        <p>Japanese Career History</p>
+                        <div class="cv-actions">
+                            <button class="btn btn-primary cv-view-btn" data-cv="職務経歴書_KHATRI_HEMANT.pdf">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                            <a href="職務経歴書_KHATRI_HEMANT.pdf" target="_blank" class="btn btn-secondary" download>
+                                <i class="fas fa-download"></i> Download
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Viewer Modal -->
+    <div id="cv-modal" class="cv-modal">
+        <div class="cv-modal-content">
+            <div class="cv-modal-header">
+                <h3 id="cv-modal-title">CV Viewer</h3>
+                <button class="cv-modal-close" aria-label="Close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cv-modal-body">
+                <iframe id="cv-iframe" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- Contact Section -->
     <section id="contact" class="section section-dark">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-number">06.</span>
+                <span class="title-number">07.</span>
                 Get In Touch with me
             </h2>
             <div class="contact-content">
